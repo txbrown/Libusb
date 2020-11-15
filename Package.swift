@@ -4,15 +4,9 @@
 import PackageDescription
 
 let package = Package(
-    name: "CLibusb",
-        providers: [
-        .brew(["libusb"]),
-        .apt(["libusb"])
-    ],
-    products: [
-        .library(name: "CLibusb", targets: ["CLibusb"]),
-    ],
-    targets: [
-        .systemLibrary(name: "CLibusb"),
+    name: "Libusb",
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+        // .package(url: /* package url */, from: "1.0.0"),
     ]
 )

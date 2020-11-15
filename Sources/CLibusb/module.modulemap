@@ -1,5 +1,0 @@
-module CLibusb [system] {
-  header "../../Headers/CLibusb-Bridging-Header.h"
-  link "libusb"
-  export *
-}
