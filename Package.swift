@@ -4,19 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "Libusb",
+    name: "CLibusb",
         providers: [
         .brew(["libusb"]),
         .apt(["libusb"])
     ],
-  products: [
-        .library(name: "Libusb", targets: ["Libusb"]),
+    products: [
+        .library(name: "CLibusb", targets: ["CLibusb"]),
     ],
     targets: [
-        .systemLibrary(
-            name: "libusb")
-        .target(
-            name: "Libusb",
-            dependencies: ["libusb"]),
+        .systemLibrary(name: "CLibusb"),
     ]
 )
