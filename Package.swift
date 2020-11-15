@@ -5,9 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "Libusb",
-    pkgConfig: "libusb",
-    providers: [
-        .brew(["libusb"]),
-        .apt(["libusb"])
+    products: [
+        .library(
+            name: "Libusb",
+            targets: ["Libusb"]),
+    ],
+    targets: [
+     
     ]
 )
