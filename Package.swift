@@ -9,9 +9,14 @@ let package = Package(
         .brew(["libusb"]),
         .apt(["libusb"])
     ],
-   targets: [
-        // by default the package manager assumes the module lives in a folder of the 
-        // same name underneath the `Sources/` directory
-        .systemLibrary(name: "Libusb", path: ".", pkgConfig: "libusb")
+  products: [
+        .library(name: "Libusb", targets: ["Libusb"]),
+    ],
+    targets: [
+        .systemLibrary(
+            name: "libusb")
+        .target(
+            name: "Libusb",
+            dependencies: ["libusb"]),
     ]
 )
