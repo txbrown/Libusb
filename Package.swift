@@ -12,6 +12,6 @@ let package = Package(
    targets: [
         // by default the package manager assumes the module lives in a folder of the 
         // same name underneath the `Sources/` directory
-        .systemLibrary(name: "Libusb", path: "., pkgConfig: "libusb")
+        .systemLibrary(name: "Libusb", path: ".", pkgConfig: "libusb")
     ]
 )
