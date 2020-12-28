@@ -1,5 +1,5 @@
 module libusb {
     header "/usr/local/include/libusb-1.0/libusb.h"
-    link "libusb-1.0"
+    link "libusb"
     export *
 }
